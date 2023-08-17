@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <label for="txtVize"> Vize :
+        <input type="text" name="txtVize" id="txtVize">
+    </label>
+    <label for="txtFinal"> Final :
+        <input type="text" name="txtFinal" id="txtFinal">
+    </label>
+    <input type="button" name="button" id="hesapla" value="HESAPLA">
+    <div id="sonuc"></div>
+
+    <script>
+
+        var txtVize = document.getElementById("txtVize");
+        var txtFinal = document.getElementById("txtFinal");
+        var btnHesapla = document.getElementById("hesapla");
+        var sonucDiv = document.getElementById("sonuc");
+
+
+        /* onclick ile butonun bağlama olayı tıklanıyor*/
+
+        btnHesapla.onclick=function(){
+
+            //text nesnelerindeki değerleri okuyup, sayı türüne çevirelim
+            var vize = Number(txtVize.value);
+            var final =Number(txtFinal.value);
+
+            //ortalama notu hesaplayalım
+            var ortalama = vize*40/100 + final*60/100;
+
+            //şartları yazdıralım 
+            var durum ="";
+            if (ortalama >=50 && final>=50) {
+                durum = "GEÇTİNİZ";
+            }
+            else if (ortalama >=50 && final<=50) {
+                durum = "FİNAL NOTU 50 PUAN ALTINDA, KALDINIZ!!!";
+            }
+            else{
+                durum="BÜTLERİ DENEYENİZ."
+            }
+            sonucDiv.innerHTML="Notunuz:"+ortalama + "<br>" + durum;
+        }
+
+    </script>
+</body>
+</html>

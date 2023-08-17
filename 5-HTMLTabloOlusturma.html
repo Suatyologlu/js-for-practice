@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Etiketler arası boşluk eklemek için */
+        label{
+            display: block;
+        }
+        /* Tablo ve hücrelerin kenarlık rengini belirler */
+        table, td{
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <!-- Satır sayısını belirlemek için bir etiket ve giriş alanı -->
+    <label>Satır Sayısı</label>
+    <input type="text" id="satir">
+
+    <!-- Sütun sayısını belirlemek için bir etiket ve giriş alanı -->
+    <label>Sütun Sayısı</label>
+    <input type="text" id="sutun">
+
+    <!-- Tabloyu oluşturacak buton -->
+    <label><button id="olustur">Oluştur</button></label>
+
+    <!-- Oluşturulan tablonun gösterileceği <div> alanı -->
+    <div id="goster"></div>
+
+    <script>
+        // Oluştur butonuna tıklama olay işleyicisi eklenir
+        var olustur = document.getElementById("olustur");
+        olustur.onclick = function(){
+            // Satır ve sütun sayılarını alır
+            var sayac = 1 ;
+            var satir = document.getElementById("satir").value;
+            var sutun = document.getElementById("sutun").value;
+
+            // Yeni bir tablo elementi oluşturur
+            var table = document.createElement("table");
+
+            // Satırları oluşturmak için döngü
+            for (let i = 0; i < satir; i++) {
+                // Yeni bir satır elementi oluşturur
+                var tr = document.createElement("tr");
+
+                // Satırı tabloya ekler
+                table.appendChild(tr);
+
+                // Sütunları oluşturmak için iç içe döngü
+                for (var j = 0; j < sutun; j++) {
+                    // Yeni bir hücre elementi oluşturur
+                    var td = document.createElement("td");
+
+                    // Hücre içeriğine sayac değerini ekler ve sayacı artırır
+                    td.innerHTML = sayac++;
+                    
+                    // Hücreyi satıra ekler
+                    tr.appendChild(td);
+                }
+            }
+
+            // Göster alanını temizler
+            document.getElementById("goster").innerHTML = "";
+
+            // Tabloyu göster alanına ekler
+            document.getElementById("goster").appendChild(table);
+        }
+    </script>
+</body>
+</html>

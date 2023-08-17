@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 id="mesaj"></h1>
+    
+    <script>
+        var mesaj = document.getElementById("mesaj");
+
+        // Belirli aralıkta tam sayı rastgele sayılar üretir
+        mesaj.innerHTML = sayiUret(80, 100);
+
+        function sayiUret(min, max) {
+            // Math.random() fonksiyonu 0 ile 1 arasında rastgele ondalık bir sayı üretir.
+            // min ve max değerleri arasında rastgele tam sayı üretmek için Math.floor() fonksiyonu kullanılır.
+            // Üretilen sayı, min dahil ve max hariç olacak şekilde belirtilen aralıkta olur.
+            var sayi = Math.floor(Math.random() * (max - min + 1)) + min;
+            return sayi;
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+  </style>
+  <body>
+    <h1>Javascript Toplama</h1>
+
+    <form action="">
+      <label for=""
+        >1.Sayı:
+        <input type="text" name="" id="s1" />
+      </label>
+      <label for=""
+        >2.Sayı:
+        <input type="text" name="" id="s2" />
+      </label>
+    </form>
+
+    <div id="sonuc"></div>
+    
+
+    <script>
+      var sayi1 = document.getElementById("s1");
+      var sayi2 = document.getElementById("s2");
+      var sonuc = document.getElementById("sonuc");
+
+      function hesapla () {
+        var toplam = Number(sayi1.value) + Number(sayi2.value);
+        sonuc.innerHTML = toplam;
+      };
+      
+      sayi1.oninput = hesapla;
+      sayi2.oninput = hesapla;
+ 
+      // “.oninput” nesneye değer girildiğinde veya nesnenin içerisindeki değer değiştirildiğinde butona gerek duymaksızın, belirlenen yere sonucu yazdırır.
+ </script>
+  </body>
+</html>
+
+<!-- 
+  
+ -->

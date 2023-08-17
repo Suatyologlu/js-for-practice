@@ -1,0 +1,50 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+  </style>
+  <body>
+    <h1>Javascript Toplama</h1>
+
+    <form action="">
+      <label for=""
+        >1.Sayı:
+        <input type="text" name="" id="s1" />
+      </label>
+      <label for=""
+        >2.Sayı:
+        <input type="text" name="" id="s2" />
+      </label>
+      <input type="button" value="Sayıları Topla" id="hesap" />
+    </form>
+
+    <div id="sonuc"></div>
+    
+
+    <script>
+      var sayi1 = document.getElementById("s1");
+      var sayi2 = document.getElementById("s2");
+      var hesapBtn = document.getElementById("hesap");
+      var sonuc = document.getElementById("sonuc");
+
+      hesapBtn.onclick = function () {
+        var toplam = Number(sayi1.value) + Number(sayi2.value);
+        sonuc.innerHTML = toplam;
+      };
+    </script>
+  </body>
+</html>
+
+<!-- 
+  1- HTML içerisine yazdığımız nesneleri  DOM ile JavaScript içerisine geçirebilirz.
+  1- İnputların içindeki değerleri value ile okuyabiliriz.
+  2- İnput nesnelerinin içindeki değerleri her zaman metinseldir. Sayısal değerler için NUMDER kullanırız.
+  3- Div nesnelerinin içerisine veri yazdırmak için textContent veya innerHTML kullanırız.
+ -->

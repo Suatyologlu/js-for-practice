@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- Javascript'te bir metin kutusundan veri alma-->
+    <input type="text" id="txtAd" value="Ahmet">
+    <button id="uyari">Selamla</button>
+    <script>
+        /*
+        //metin kutusunun içindeki değer value çzelliğinde tutulur.
+        //değeri almak yada değiştirmek için value özelliği kullanılır.
+
+        //değeri değiştirdik.
+        document.getElementById("txtAd").value="Hayri";
+
+        //değeri okuyalım 
+        var ad = document.getElementById("txtAd");
+        window.alert(ad.value);
+        */
+        // Örnek 2 : Buton ile div içinde yazdıralım.
+
+        var btn=document.getElementById("uyari");
+        btn.onclick=function(){
+
+            var ad = document.getElementById("txtAd");
+            window.alert("Hoşgeldin: " + ad.value);
+        }
+
+    </script>
+</body>
+</html>

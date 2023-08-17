@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- Kullanıcıdan faktöriyelini hesaplamak istediği sayıyı gireceği bir input alanı -->
+    <input type="text" id="sayi">
+
+    <!-- Faktöriyel hesaplamasının yapılacağı buton -->
+    <button id="hesapla">Faktoriyel Hesapla</button>
+
+    <!-- Faktöriyel sonucunun gösterileceği <div> alanı -->
+    <div id="uyari"></div>
+    
+    <script>
+        // Hesapla butonuna tıklama olay işleyicisi eklenir
+        document.getElementById("hesapla").onclick = () => {
+            // Faktöriyel hesaplaması için bir başlangıç değeri atanır (çarpma etkisiz elemanı 1'dir)
+            var sonuc = 1;
+            
+            // Kullanıcının girdiği sayı alınır
+            var sayi = document.getElementById("sayi").value;
+
+            // 1'den başlayarak girilen sayıya kadar olan tüm sayılar için faktöriyel hesabı yapılır
+            for (let i = 1; i <= sayi; i++) {
+                // Her adımda sonuc değişkenine i değeri çarpılır, yani faktöriyel hesabı yapılır
+                sonuc *= i;
+                console.log(sonuc);
+            }
+
+            // Faktöriyel sonucu "uyari" adlı <div> içine yazdırılır
+            document.getElementById("uyari").innerHTML = "Sayının Faktöriyeli: " + sonuc;
+        }
+
+    </script>
+</body>
+</html>

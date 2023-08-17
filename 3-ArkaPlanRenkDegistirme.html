@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="renkDegistir"> Renk Değiştir </button>
+
+    <script>
+        /*
+            Bir renk kodu 0-255 arasında bir değer alır.
+            (kırmızı,yeşil,mavi) sırasıyla değerler alır.
+            renk kodları rgb(255,255,255);
+        */
+
+        var renkBtn=document.querySelector("#renkDegistir");
+        renkBtn.onclick=()=>{
+
+            var renk1 = Math.round(Math.random()*255);
+            var renk2 = Math.round(Math.random()*255);
+            var renk3 = Math.round(Math.random()*255);
+
+            document.body.style.background="rgb("+renk1+","+renk2+","+renk3+")";
+        }
+    </script>
+</body>
+</html>
+
+<!--
+    1- querySelector yöntemi, bir belge içinde belirtilen bir seçiciye (CSS seçicisi) uyan ilk HTML öğesini döndürür. Seçici, HTML belgesindeki bir öğeyi tanımlamak için kullanılır.
+    2- Math.random() fonksiyonu, 0 ile 1 arasında rastgele bir ondalık sayı üretir. Bu sayıları 0 ile 255 arasında bir tamsayıya dönüştürmek için Math.round() kullanıyoruz.
+    
+ -->

@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="sayi">
+    <input type="button" value="hesapla" id="hesapla">
+    <div id="sonuc"></div>
+
+
+    <script>
+        var sayi = document.getElementById("sayi");
+        var btnHesapla = document.getElementById("hesapla");
+        var sonuc = document.getElementById("sonuc");
+
+        btnHesapla.onclick=function() 
+        {
+            if (sayi.value%2==0) 
+            {
+                sonuc.textContent=sayi.value + "sayısı çift sayıdır.";
+            }
+            else
+            {
+                sonuc.textContent=sayi.value + "sayısı tek sayıdır";
+            }
+        }
+    </script>
+</body>
+</html>

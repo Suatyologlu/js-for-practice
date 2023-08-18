@@ -7,4 +7,4 @@ Daha Turkcell Geleceği Yazanlar ve Fiziksel kitabım var oralardan izleyip okuy
 
 Kaynak : https://youtube.com/playlist?list=PLHp3SJ11RbQLjQ6MhGnFijxkSeXoOqeDs
 
-                                                                                                31.07.2023
+    Başlangıç Tarihi  :  31.07.2023

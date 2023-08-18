@@ -5,3 +5,5 @@ O yüzden yüzeysel öğrenmeyle geçiştirmektense. TKcode kanalından bu örne
 Daha Turkcell Geleceği Yazanlar ve Fiziksel kitabım var oralardan izleyip okuyup uygulayıp pekiştireceğim.
 
 Kaynak : https://youtube.com/playlist?list=PLHp3SJ11RbQLjQ6MhGnFijxkSeXoOqeDs
+
+                                                                                                31.07.2023
